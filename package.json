@@ -1,0 +1,15 @@
+{
+  "name": "js-ts-algorithms",
+  "version": "1.0.0",
+  "scripts": {},
+  "author": "markulie",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "@types/node": "^20.14.11",
+    "eslint": "^8.57.0",
+    "globals": "^15.8.0",
+    "typescript-eslint": "^7.16.0"
+  }
+}
