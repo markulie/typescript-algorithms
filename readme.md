@@ -14,15 +14,6 @@ The main objective of this repository is to offer a hands-on learning resource f
 - **Comprehensive Comments**: Detailed comments are provided to explain the logic and flow of each algorithm.
 - **C# Comparisons**: Where applicable, references to the original C# versions are included to show the transition between languages.
 
-## Algorithms Included
-
-This repository includes a variety of fundamental algorithms such as:
-
-- Sorting Algorithms (Bubble Sort, Quick Sort, Merge Sort, etc.)
-- Search Algorithms (Binary Search, Linear Search, etc.)
-- Data Structures (Linked List, Stack, Queue, etc.)
-- Miscellaneous Algorithms (Fibonacci, Factorial, etc.)
-
 ## Getting Started
 
 To get started with these algorithms:
@@ -35,12 +26,16 @@ To get started with these algorithms:
 
 2. **Install Dependencies** (if any):
    ```sh
-   npm install
+   npm i
+   ```
+3. **Install TypeScript and ts-node globally**:
+   ```sh
+   npm i -g typescript ts-node
    ```
 
-3. **Run the Algorithms**:
+4. **Run the Algorithms**:
    ```sh
-   npm start
+   ts-node src/{fileName}.ts
    ```
 
 ## Contributing
@@ -57,4 +52,4 @@ If you have any questions or suggestions, feel free to open an issue
 
 ---
 
-Thank you for checking out the JavaScript and TypeScript Algorithms repository! Happy coding!
+Thank you for checking out the JavaScript and TypeScript Algorithms repository!
