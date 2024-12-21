@@ -1,4 +1,4 @@
-export function maxNumberA(num: number): number {
+export const maxNumberA = (num: number): number => {
   let max = 0
 
   while (num !== 0) {
@@ -10,7 +10,7 @@ export function maxNumberA(num: number): number {
   return max
 }
 
-export function maxNumberB(num: number): number {
+export const maxNumberB = (num: number): number => {
   const strNumber = Math.abs(num).toString()
   let max = 0
 

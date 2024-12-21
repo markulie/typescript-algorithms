@@ -1,7 +1,7 @@
 import * as readline from 'readline/promises'
 import { stdin as input, stdout as output } from 'process'
 
-export async function promptForPositiveNumber(): Promise<number> {
+export const promptForPositiveNumber = async (): Promise<number> => {
   const rl = readline.createInterface({ input, output })
 
   let isValid = false
@@ -17,7 +17,7 @@ export async function promptForPositiveNumber(): Promise<number> {
         console.log('ERROR: Invalid input.')
       }
     } catch (err) {
-      console.error('ERROR: Unable to read input. Please try again.')
+      console.error('ERROR: Unable to read input. Please try again.', err)
     }
   }
 

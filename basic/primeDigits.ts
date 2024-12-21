@@ -1,4 +1,4 @@
-export function primeDigits(num: number): number[] {
+export const primeDigits = (num: number): number[] => {
   const primeDigits: number[] = []
 
   while (num !== 0) {

@@ -1,4 +1,4 @@
-export function swapMaxMin(arr: number[]): number[] {
+export const swapMaxMin = (arr: number[]): number[] => {
   let max = arr[0]
   let min = arr[0]
   let maxIndex = 0

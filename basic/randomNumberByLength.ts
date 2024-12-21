@@ -1,6 +1,6 @@
 import { randomNumberByIndex } from './randomNumberByIndex'
 
-export function randomNumberByLength(length: number): number {
+export const randomNumberByLength = (length: number): number => {
   let result = ''
   for (let i = 0; i < length; i++) {
     result += randomNumberByIndex(10)

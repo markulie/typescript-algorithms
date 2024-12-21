@@ -1,15 +1,15 @@
 {
-  "name": "js-ts-algorithms",
-  "version": "1.0.0",
+  "name": "javascript-typescript-algorithms-games",
+  "version": "1.0.2",
   "scripts": {},
   "author": "markulie",
-  "license": "ISC",
+  "license": "MIT",
   "description": "",
   "devDependencies": {
-    "@eslint/js": "^9.7.0",
-    "@types/node": "^20.14.11",
-    "eslint": "^8.57.0",
-    "globals": "^15.8.0",
-    "typescript-eslint": "^7.16.0"
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.2",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
+    "typescript-eslint": "^8.18.1"
   }
 }

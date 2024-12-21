@@ -25,6 +25,7 @@ class BankAccount {
   public deposit(amount: number): void {
     if (amount <= 0) {
       console.log('Deposit amount must be positive.')
+
       return
     }
     this.balance += amount
@@ -35,10 +36,12 @@ class BankAccount {
   public withdraw(amount: number): void {
     if (amount <= 0) {
       console.log('Withdrawal amount must be positive.')
+
       return
     }
     if (this.balance < amount) {
       console.log('Insufficient Balance')
+
       return
     }
     this.balance -= amount
@@ -56,7 +59,3 @@ const myBankAccount = new BankAccount('123456', 'John Doe', 1000)
 myBankAccount.deposit(500)
 myBankAccount.showAccountDetails()
 myBankAccount.withdraw(2000)
-
-function myyname() {
-  console.log()
-}

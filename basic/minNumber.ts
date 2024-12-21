@@ -1,4 +1,4 @@
-export function minNumberA(num: number): number {
+export const minNumberA = (num: number): number => {
   let min = 9
 
   while (num !== 0) {
@@ -10,7 +10,7 @@ export function minNumberA(num: number): number {
   return min
 }
 
-export function minNumberB(num: number): number {
+export const minNumberB = (num: number): number => {
   const strNumber = Math.abs(num).toString()
   let min = 9
 

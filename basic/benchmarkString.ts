@@ -1,10 +1,8 @@
 import { performance } from 'perf_hooks'
 
-function concatenateStrings(str1: string, str2: string): string {
-  return str1 + str2
-}
+const concatenateStrings = (str1: string, str2: string): string => str1 + str2
 
-function benchmarkConcatenation(): void {
+const benchmarkConcatenation = (): void => {
   const str1 = 'Hello, '
   const str2 = 'world!'
   const iterations = 1000000

@@ -75,7 +75,9 @@ class TicTacToe {
 }
 
 async function promptMove(game: TicTacToe): Promise<void> {
-  const input = await askQuestion(`Player ${game.getCurrentPlayer()}, enter your move (row and column): `)
+  const input = await askQuestion(
+    `Player ${game.getCurrentPlayer()}, enter your move (row and column): `,
+  )
   const [row, col] = input.split(' ').map(Number)
 
   if (game.makeMove(row, col)) {

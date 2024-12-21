@@ -3,7 +3,7 @@ type MaxResult = {
   index: number
 }
 
-export function maxElement(arr: number[]): MaxResult {
+export const maxElement = (arr: number[]): MaxResult => {
   let max: number = arr[0]
   let index: number = 0
 

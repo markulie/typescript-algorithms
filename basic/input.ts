@@ -5,7 +5,7 @@ const rl = readline.createInterface({
   output: process.stdout,
 })
 
-export function askQuestion(question: string): Promise<string> {
+export const askQuestion = (question: string): Promise<string> => {
   return new Promise((resolve) => {
     rl.question(question, (answer) => {
       resolve(answer)
@@ -13,6 +13,4 @@ export function askQuestion(question: string): Promise<string> {
   })
 }
 
-export function closeInput(): void {
-  rl.close()
-}
+export const closeInput = (): void => rl.close()

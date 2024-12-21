@@ -1,3 +1,2 @@
-export function randomNumberByIndex(maxIndex: number): number {
-  return Math.floor(Math.random() * maxIndex)
-}
+export const randomNumberByIndex = (maxIndex: number): number =>
+  Math.floor(Math.random() * maxIndex)

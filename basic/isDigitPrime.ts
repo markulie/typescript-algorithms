@@ -1,6 +1,6 @@
 import { isOneDigit } from './isOneDigit'
 
-export function isDigitPrime(num: number): boolean {
+export const isDigitPrime = (num: number): boolean => {
   if (!isOneDigit(num)) return false
 
   switch (num) {

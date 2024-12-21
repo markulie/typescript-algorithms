@@ -1,8 +1,7 @@
 import { isPrime } from './isPrime'
 import { promptForPositiveNumber } from './promptForPositiveNumber'
 
-async function main(): Promise<void> {
-  // eslint-disable-next-line no-constant-condition
+const main = async (): Promise<void> => {
   while (true) {
     const number = await promptForPositiveNumber()
     const isPrimeNumber = isPrime(number)

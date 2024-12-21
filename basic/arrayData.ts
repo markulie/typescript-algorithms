@@ -11,7 +11,7 @@ type ArrayResult = {
   primeNumbers: number[]
 }
 
-export function arrayData(arr: number[]): ArrayResult {
+export const arrayData = (arr: number[]): ArrayResult => {
   let max: number = arr[0]
   let min: number = arr[0]
   let sum: number = 0

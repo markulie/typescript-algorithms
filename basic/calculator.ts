@@ -19,7 +19,8 @@ class AdvancedCalculator {
     return Math.pow(base, exponent)
   }
   sqrt(value: number): number {
-    if (value < 0) throw new Error('Cannot calculate the square root of a negative number.')
+    if (value < 0)
+      throw new Error('Cannot calculate the square root of a negative number.')
 
     return Math.sqrt(value)
   }
@@ -33,12 +34,14 @@ class AdvancedCalculator {
     return Math.tan(this.degreesToRadians(angle))
   }
   log(value: number): number {
-    if (value <= 0) throw new Error('Logarithm is undefined for non-positive values.')
+    if (value <= 0)
+      throw new Error('Logarithm is undefined for non-positive values.')
 
     return Math.log(value)
   }
   log10(value: number): number {
-    if (value <= 0) throw new Error('Logarithm base 10 is undefined for non-positive values.')
+    if (value <= 0)
+      throw new Error('Logarithm base 10 is undefined for non-positive values.')
 
     return Math.log10(value)
   }
@@ -48,12 +51,14 @@ class AdvancedCalculator {
     return n <= 1 ? 1 : n * this.factorial(n - 1)
   }
   combination(n: number, k: number): number {
-    if (n < 0 || k < 0) throw new Error('Combination is not defined for negative numbers.')
+    if (n < 0 || k < 0)
+      throw new Error('Combination is not defined for negative numbers.')
 
     return this.factorial(n) / (this.factorial(k) * this.factorial(n - k))
   }
   permutation(n: number, k: number): number {
-    if (n < 0 || k < 0) throw new Error('Permutation is not defined for negative numbers.')
+    if (n < 0 || k < 0)
+      throw new Error('Permutation is not defined for negative numbers.')
 
     return this.factorial(n) / this.factorial(n - k)
   }
@@ -97,7 +102,7 @@ rl.on('close', () => {
 
 rl.prompt()
 
-function evalExpression(expression: string): number {
+const evalExpression = (expression: string): number => {
   const [operator, ...operands] = expression.split(' ').filter(Boolean)
   const args = operands.map((arg) => parseFloat(arg))
 

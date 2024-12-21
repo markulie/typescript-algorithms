@@ -1,4 +1,4 @@
-function whileFunction(): void {
+const whileFunction = (): void => {
   let i = 0
   while (i < 10000) {
     i++
