@@ -1,4 +1,4 @@
-# JavaScript/TypeScript Algorithms
+# TypeScript (JavaScript) Algorithms
 
 ## Overview
 
