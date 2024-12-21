@@ -1,4 +1,4 @@
-import { randomNumberByLength } from './randomNumberByLength'
+import { randomNumberByLength } from './random-number-by-length'
 
 export const createArray = (
   length: number,

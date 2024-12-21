@@ -1,4 +1,4 @@
-import { isEven } from './isEven'
+import { isEven } from './is-even'
 
 const num = 2
 console.log(num)

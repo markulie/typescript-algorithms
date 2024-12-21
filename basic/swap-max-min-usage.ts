@@ -1,5 +1,5 @@
-import { swapMaxMin } from './swapMaxMin'
-import { createArray } from './createArray'
+import { swapMaxMin } from './swap-max-min'
+import { createArray } from './create-array'
 
 const arr = createArray(4, true)
 console.log('Initial  array:', arr)

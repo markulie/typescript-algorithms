@@ -7,12 +7,12 @@ const rl = readline.createInterface({
 })
 
 // Function to generate a random number between min and max (inclusive)
-function getRandomNumber(min, max) {
+function getRandomNumber(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
 // Function to start the guessing game
-function playGame() {
+function playGame(): void {
   const min = 1
   const max = 100
   const secretNumber = getRandomNumber(min, max)
@@ -21,8 +21,8 @@ function playGame() {
   console.log(`Guess the number between ${min} and ${max}`)
 
   // Recursive function to handle user input and guessing logic
-  function promptGuess() {
-    rl.question('Enter your guess: ', (input) => {
+  function promptGuess(): void {
+    rl.question('Enter your guess: ', (input: string) => {
       const guess = parseInt(input, 10)
       attempts++
 

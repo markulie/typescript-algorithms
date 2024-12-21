@@ -1,5 +1,5 @@
-import { isPrime } from './isPrime'
-import { promptForPositiveNumber } from './promptForPositiveNumber'
+import { isPrime } from './is-prime'
+import { promptForPositiveNumber } from './prompt-for-positive-number'
 
 const main = async (): Promise<void> => {
   while (true) {

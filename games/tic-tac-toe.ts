@@ -1,51 +1,56 @@
 import readline from 'readline'
 
-// Setting up the readline interface for handling user input and output
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-})
+type Player = 'X' | 'O'
+type Cell = Player | null
 
-// Class representing the Tic-Tac-Toe game
 class TicTacToe {
+  private board: Cell[][]
+  private currentPlayer: Player
+  private turns: number
+
   constructor() {
-    // Initializing the game board as a 3x3 grid filled with nulls
+    // Initialize a 3x3 board filled with null values
     this.board = [
       [null, null, null],
       [null, null, null],
       [null, null, null],
     ]
-    // Setting the starting player to 'X'
-    this.currentPlayer = 'X'
-    // Tracking the number of turns taken in the game
-    this.turns = 0
+    this.currentPlayer = 'X' // Start with Player X
+    this.turns = 0 // Track the number of turns
   }
 
-  // Method to print the current state of the game board
-  printBoard() {
-    this.board.forEach((row) => {
-      console.log(row.map((cell) => cell || ' ').join(' | '))
+  // Print the game board
+  printBoard(): void {
+    console.clear()
+    console.log('  1   2   3')
+    this.board.forEach((row, rowIndex) => {
+      const rowString = row.map((cell) => cell || ' ').join(' | ')
+      console.log(`${rowIndex + 1} ${rowString}`)
+      if (rowIndex < 2) console.log('  ---+---+---')
     })
     console.log('\n')
   }
 
-  // Method to make a move on the board
-  makeMove(row, col) {
-    // Checking if the move is within bounds and if the cell is empty
+  // Attempt to make a move
+  makeMove(row: number, col: number): boolean {
+    // Adjust for 1-based indexing
+    row -= 1
+    col -= 1
+
     if (row < 0 || row > 2 || col < 0 || col > 2 || this.board[row][col]) {
       console.log('Invalid move. Try again.')
+
       return false
     }
 
-    // Placing the current player's symbol on the board
-    this.board[row][col] = this.currentPlayer
-    // Incrementing the turn count
-    this.turns++
+    this.board[row][col] = this.currentPlayer // Place the current player's symbol
+    this.turns++ // Increment the turn count
+
     return true
   }
 
-  // Method to check if there is a winner
-  checkWinner() {
+  // Check for a winner
+  checkWinner(): Player | null {
     const lines = [
       // Rows
       [this.board[0][0], this.board[0][1], this.board[0][2]],
@@ -60,7 +65,6 @@ class TicTacToe {
       [this.board[0][2], this.board[1][1], this.board[2][0]],
     ]
 
-    // Checking all possible winning lines
     for (const line of lines) {
       if (line[0] && line[0] === line[1] && line[1] === line[2]) {
         return line[0]
@@ -70,37 +74,39 @@ class TicTacToe {
     return null
   }
 
-  // Method to check if the game is a draw
-  isDraw() {
+  // Check if the game is a draw
+  isDraw(): boolean {
     return this.turns === 9 && !this.checkWinner()
   }
 
-  // Method to switch the current player
-  switchPlayer() {
+  // Switch to the next player
+  switchPlayer(): void {
     this.currentPlayer = this.currentPlayer === 'X' ? 'O' : 'X'
   }
 
-  // Method to get the current player
-  getCurrentPlayer() {
+  // Get the current player
+  getCurrentPlayer(): Player {
     return this.currentPlayer
   }
 }
 
-// Function to prompt the player for their move
-function promptMove(game) {
+// Setting up the readline interface
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+})
+
+// Function to handle prompting the player for their move
+function promptMove(game: TicTacToe): void {
   rl.question(
-    `Player ${game.getCurrentPlayer()}, enter your move (row and column): `,
+    `Player ${game.getCurrentPlayer()}, enter your move (row and column, e.g., "1 2"): `,
     (input) => {
-      // Parsing the player's input into row and column numbers
       const [row, col] = input.split(' ').map(Number)
 
-      // Attempting to make the move
       if (game.makeMove(row, col)) {
-        // If the move is successful, print the board
         game.printBoard()
-        const winner = game.checkWinner()
 
-        // Checking if there's a winner or if the game is a draw
+        const winner = game.checkWinner()
         if (winner) {
           console.log(`Player ${winner} wins!`)
           rl.close()
@@ -108,19 +114,17 @@ function promptMove(game) {
           console.log('The game is a draw.')
           rl.close()
         } else {
-          // If the game continues, switch the player and prompt again
           game.switchPlayer()
           promptMove(game)
         }
       } else {
-        // If the move is invalid, prompt again
         promptMove(game)
       }
     },
   )
 }
 
-// Initializing and starting the game
+// Start the game
 const game = new TicTacToe()
 game.printBoard()
 promptMove(game)

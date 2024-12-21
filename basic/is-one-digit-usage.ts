@@ -1,4 +1,4 @@
-import { isOneDigit } from './isOneDigit'
+import { isOneDigit } from './is-one-digit'
 
 console.log(isOneDigit(3))
 console.log(isOneDigit(44))

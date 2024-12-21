@@ -1,6 +1,6 @@
-import { createArray } from './createArray'
-import { findIndex } from './findIndex'
-import { randomNumberByIndex } from './randomNumberByIndex'
+import { createArray } from './create-array'
+import { findIndex } from './find-index'
+import { randomNumberByIndex } from './random-number-by-index'
 
 const length = 5
 const arr = createArray(length)

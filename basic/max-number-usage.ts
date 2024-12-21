@@ -1,5 +1,5 @@
-import { maxNumberA, maxNumberB } from './maxNumber'
-import { randomNumberByLength } from './randomNumberByLength'
+import { maxNumberA, maxNumberB } from './max-number'
+import { randomNumberByLength } from './random-number-by-length'
 
 const num = randomNumberByLength(9)
 console.log(num)

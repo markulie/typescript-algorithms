@@ -1,70 +1,62 @@
 import * as readline from 'readline'
 
 class AdvancedCalculator {
-  add(a: number, b: number): number {
-    return a + b
-  }
-  subtract(a: number, b: number): number {
-    return a - b
-  }
-  multiply(a: number, b: number): number {
-    return a * b
-  }
-  divide(a: number, b: number): number {
-    if (b === 0) throw new Error('Division by zero is not allowed.')
+  add = (a: number, b: number): number => a + b
 
+  subtract = (a: number, b: number): number => a - b
+
+  multiply = (a: number, b: number): number => a * b
+
+  divide = (a: number, b: number): number => {
+    if (b === 0) throw new Error('Division by zero is not allowed.')
     return a / b
   }
-  power(base: number, exponent: number): number {
-    return Math.pow(base, exponent)
-  }
-  sqrt(value: number): number {
+
+  power = (base: number, exponent: number): number => Math.pow(base, exponent)
+
+  sqrt = (value: number): number => {
     if (value < 0)
       throw new Error('Cannot calculate the square root of a negative number.')
-
     return Math.sqrt(value)
   }
-  sin(angle: number): number {
-    return Math.sin(this.degreesToRadians(angle))
-  }
-  cos(angle: number): number {
-    return Math.cos(this.degreesToRadians(angle))
-  }
-  tan(angle: number): number {
-    return Math.tan(this.degreesToRadians(angle))
-  }
-  log(value: number): number {
+
+  sin = (angle: number): number => Math.sin(this.degreesToRadians(angle))
+
+  cos = (angle: number): number => Math.cos(this.degreesToRadians(angle))
+
+  tan = (angle: number): number => Math.tan(this.degreesToRadians(angle))
+
+  log = (value: number): number => {
     if (value <= 0)
       throw new Error('Logarithm is undefined for non-positive values.')
-
     return Math.log(value)
   }
-  log10(value: number): number {
+
+  log10 = (value: number): number => {
     if (value <= 0)
       throw new Error('Logarithm base 10 is undefined for non-positive values.')
-
     return Math.log10(value)
   }
-  factorial(n: number): number {
-    if (n < 0) throw new Error('Factorial is not defined for negative numbers.')
 
+  factorial = (n: number): number => {
+    if (n < 0) throw new Error('Factorial is not defined for negative numbers.')
     return n <= 1 ? 1 : n * this.factorial(n - 1)
   }
-  combination(n: number, k: number): number {
+
+  combination = (n: number, k: number): number => {
     if (n < 0 || k < 0)
       throw new Error('Combination is not defined for negative numbers.')
-
     return this.factorial(n) / (this.factorial(k) * this.factorial(n - k))
   }
-  permutation(n: number, k: number): number {
+
+  permutation = (n: number, k: number): number => {
     if (n < 0 || k < 0)
       throw new Error('Permutation is not defined for negative numbers.')
-
     return this.factorial(n) / this.factorial(n - k)
   }
-  private degreesToRadians(degrees: number): number {
-    return degrees * (Math.PI / 180)
-  }
+
+  private degreesToRadians = (degrees: number): number =>
+    degrees * (Math.PI / 180)
 }
 
 const calculator = new AdvancedCalculator()
@@ -79,7 +71,6 @@ console.log('Advanced Calculator. Type exit to quit.')
 rl.on('line', (input: string) => {
   if (input.trim().toLowerCase() === 'exit') {
     rl.close()
-
     return
   }
   try {

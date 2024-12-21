@@ -1,5 +1,5 @@
-import { minNumberA, minNumberB } from './minNumber'
-import { randomNumberByLength } from './randomNumberByLength'
+import { minNumberA, minNumberB } from './min-number'
+import { randomNumberByLength } from './random-number-by-length'
 
 const num = randomNumberByLength(9)
 console.log(num)

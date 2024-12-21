@@ -1,5 +1,9 @@
-import { randomNumberByLength } from './randomNumberByLength'
-import { reverseNumberA, reverseNumberB, reverseNumberC } from './reverseNumber'
+import { randomNumberByLength } from './random-number-by-length'
+import {
+  reverseNumberA,
+  reverseNumberB,
+  reverseNumberC,
+} from './reverse-number'
 
 const num = randomNumberByLength(5)
 console.log('Initial   :', num)

@@ -1,6 +1,6 @@
-import { randomNumberByLength } from './randomNumberByLength'
-import { isSymmetric } from './isSymmetric'
-import { reverseNumberA } from './reverseNumber'
+import { randomNumberByLength } from './random-number-by-length'
+import { isSymmetric } from './is-symmetric'
+import { reverseNumberA } from './reverse-number'
 
 const num = randomNumberByLength(5)
 console.log('Initial :', num)

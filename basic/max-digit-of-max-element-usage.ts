@@ -1,7 +1,7 @@
-import { maxElement } from './maxElement'
-import { maxDigitOfMaxElement } from './maxDigitOfMaxElement'
-import { createArray } from './createArray'
-import { randomNumberByIndex } from './randomNumberByIndex'
+import { maxElement } from './max-element'
+import { maxDigitOfMaxElement } from './max-digit-of-max-element'
+import { createArray } from './create-array'
+import { randomNumberByIndex } from './random-number-by-index'
 
 const arr = createArray(8, true, randomNumberByIndex(10))
 console.log(arr)

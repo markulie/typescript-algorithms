@@ -1,5 +1,5 @@
-import { primeDigits } from './primeDigits'
-import { randomNumberByLength } from './randomNumberByLength'
+import { primeDigits } from './prime-digits'
+import { randomNumberByLength } from './random-number-by-length'
 
 const num = randomNumberByLength(9)
 console.log(num)

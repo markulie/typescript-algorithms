@@ -1,4 +1,4 @@
-import { createArray } from './createArray'
+import { createArray } from './create-array'
 
 console.log(createArray(4, true))
 

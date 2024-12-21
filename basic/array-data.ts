@@ -1,5 +1,5 @@
-import { isEven } from './isEven'
-import { isPrime } from './isPrime'
+import { isEven } from './is-even'
+import { isPrime } from './is-prime'
 
 type ArrayResult = {
   max: number

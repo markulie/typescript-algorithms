@@ -23,7 +23,7 @@ export default [
       semi: ['error', 'never'],
       'no-console': 'off',
       indent: ['error', 2, { SwitchCase: 1 }],
-      'padding-line-between-statements': ['error', { blankLine: 'always', prev: '*', next: 'return' }],
+      // 'padding-line-between-statements': ['error', { blankLine: 'never', prev: '*', next: 'return' }],
     },
   },
   pluginJs.configs.recommended,

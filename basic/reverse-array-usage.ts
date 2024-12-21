@@ -1,5 +1,5 @@
-import { reverseArrayA, reverseArrayB, reverseArrayC } from './reverseArray'
-import { createArray } from './createArray'
+import { reverseArrayA, reverseArrayB, reverseArrayC } from './reverse-array'
+import { createArray } from './create-array'
 
 const arr = createArray(4, true)
 console.log('Initial:   ', arr)

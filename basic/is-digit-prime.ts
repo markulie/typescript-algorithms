@@ -1,4 +1,4 @@
-import { isOneDigit } from './isOneDigit'
+import { isOneDigit } from './is-one-digit'
 
 export const isDigitPrime = (num: number): boolean => {
   if (!isOneDigit(num)) return false

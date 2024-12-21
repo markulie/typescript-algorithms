@@ -1,4 +1,4 @@
-import { getType } from './getType'
+import { getType } from './get-type'
 
 console.log(42, getType(42))
 console.log('Hello', getType('Hello'))

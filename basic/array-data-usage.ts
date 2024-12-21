@@ -1,5 +1,5 @@
-import { createArray } from './createArray'
-import { arrayData } from './arrayData'
+import { createArray } from './create-array'
+import { arrayData } from './array-data'
 
 const arr = createArray(8, true)
 const result = arrayData(arr)

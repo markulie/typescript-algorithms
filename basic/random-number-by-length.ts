@@ -1,4 +1,4 @@
-import { randomNumberByIndex } from './randomNumberByIndex'
+import { randomNumberByIndex } from './random-number-by-index'
 
 export const randomNumberByLength = (length: number): number => {
   let result = ''
