@@ -1,10 +1,10 @@
 {
-  "name": "javascript-typescript-algorithms-games",
+  "name": "typescript-algorithms",
   "version": "1.3.2",
   "scripts": {},
   "author": "markulie",
   "license": "MIT",
-  "description": "The JavaScript/TypeScript Algorithms repository is a collection of fundamental algorithms designed for beginner programmers.",
+  "description": "The TypeScript (JavaScript) algorithms repository is a collection of fundamental algorithms designed for beginner programmers.",
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@types/node": "^22.10.2",

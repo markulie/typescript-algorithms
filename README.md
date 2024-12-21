@@ -19,9 +19,10 @@ The main objective of this repository is to offer a hands-on learning resource f
 To get started with these algorithms:
 
 1. **Clone the Repository**:
+
    ```sh
-   git clone https://github.com/markulie/javascript-typescript-algorithms.git
-   cd js-ts-algorithms
+   git clone https://github.com/markulie/typescript-algorithms.git
+   cd typescript-algorithms
    ```
 
 2. **Install Dependencies** (if any):
@@ -29,13 +30,14 @@ To get started with these algorithms:
    npm i
    ```
 3. **Install TypeScript and ts-node globally**:
+
    ```sh
    npm i -g typescript ts-node
    ```
 
 4. **Run the Algorithms**:
    ```sh
-   ts-node src/{fileName}.ts
+   ts-node basic/{fileName}.ts
    ```
 
 ## Contributing
