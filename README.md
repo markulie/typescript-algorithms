@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the **JavaScript and TypeScript Algorithms** repository! This collection is based on my original C# algorithms, now adapted and optimized for JavaScript and TypeScript. The purpose of this project is to provide beginner JS/TS programmers with a variety of algorithms to study, understand, and implement.
+This collection is based on my original C# algorithms, now adapted and optimized for TypeScript. The purpose of this project is to provide beginner TypeScript and JavaScript programmers with a variety of algorithms to study, understand, and implement.
 
 ## Purpose
 
