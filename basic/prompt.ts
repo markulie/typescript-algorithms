@@ -13,4 +13,6 @@ export const askQuestion = (question: string): Promise<string> => {
   })
 }
 
-export const closeInput = (): void => rl.close()
+export const closeInput = (): void => {
+  rl.close()
+}

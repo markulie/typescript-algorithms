@@ -1,4 +1,4 @@
-import { askQuestion, closeInput } from './input'
+import { askQuestion, closeInput } from './prompt'
 
 askQuestion('Your name? ')
   .then(name => {

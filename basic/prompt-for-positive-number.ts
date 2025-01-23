@@ -1,15 +1,12 @@
-import * as readline from 'readline/promises'
-import { stdin as input, stdout as output } from 'process'
+import { askQuestion } from './prompt'
 
 export const promptForPositiveNumber = async (): Promise<number> => {
-  const rl = readline.createInterface({ input, output })
-
   let isValid = false
   let number: number | null = null
 
   while (!isValid) {
     try {
-      const userInput = await rl.question('Enter a positive number or zero: ')
+      const userInput = await askQuestion('Enter a positive number or zero: ')
       number = parseInt(userInput, 10)
       if (Number.isInteger(number) && number >= 0) {
         isValid = true
@@ -20,8 +17,6 @@ export const promptForPositiveNumber = async (): Promise<number> => {
       console.error('ERROR: Unable to read input. Please try again.', err)
     }
   }
-
-  rl.close()
 
   return number as number
 }
