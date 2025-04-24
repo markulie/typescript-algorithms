@@ -32,12 +32,12 @@ To get started with these algorithms:
 3. **Install TypeScript and ts-node globally**:
 
    ```sh
-   npm i -g typescript ts-node
+   npm i -g typescript tsx
    ```
 
 4. **Run the Algorithms**:
    ```sh
-   ts-node basic/{fileName}.ts
+   tsx basic/{fileName}.ts
    ```
 
 ## Contributing
